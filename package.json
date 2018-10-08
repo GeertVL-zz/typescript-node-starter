@@ -1,0 +1,41 @@
+{
+  "name": "typescript-node-starter",
+  "version": "1.0.0",
+  "description": "Start project for a typescript with node project",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch & nodemon dist",
+    "tsc": "tsc",
+    "test": "jest",
+    "prettier:base": "prettier --parser typescript --single-quote",
+    "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeertVL/typescript-node-starter.git"
+  },
+  "author": "Geert Van Laethem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeertVL/typescript-node-starter/issues"
+  },
+  "homepage": "https://github.com/GeertVL/typescript-node-starter#readme",
+  "dependencies": {
+    "@types/node": "^10.9.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.9.4",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "ts-jest": "^23.1.4",
+    "ts-node": "^7.0.1",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.0.3",
+    "nodemon": "^1.18.4"
+  }
+}
