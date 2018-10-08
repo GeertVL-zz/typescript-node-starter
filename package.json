@@ -12,7 +12,8 @@
     "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
     "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -31,11 +32,12 @@
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.4",
     "jest": "^23.5.0",
+    "nodemon": "^1.18.4",
     "prettier": "^1.14.2",
     "ts-jest": "^23.1.4",
     "ts-node": "^7.0.1",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.0.3",
-    "nodemon": "^1.18.4"
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
   }
 }
